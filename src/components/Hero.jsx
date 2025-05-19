@@ -1,6 +1,11 @@
 import Icon from "./utils/Icon"
 
 const Hero = () => {
+
+    const onShowProduct = () => {
+        console.log("Lihat Produk");
+    }
+
     return (
         <div className="container mx-auto px-4 xl:px-0">
             <section className="bg-green-100 rounded-xl h-[420px] md:h-[485px] relative overflow-hidden text-white">
@@ -12,8 +17,9 @@ const Hero = () => {
                         <p className="leading-7">Nikmati kelezatan bakpia premium dengan berbagai varian rasa yang unik dan menggugah selera</p>
 
                         <a
-                            href="#pesan-sekarang"
+                            href="#lihat-produk"
                             className="inline-flex items-center bg-green text-white px-4 py-2 rounded-sm text-sm gap-2 whitespace-nowrap transition-all duration-300 h-[37px] w-[111px] hover:w-[135px] group"
+                            onClick={onShowProduct}
                         >
                             <span>Lihat Produk</span>
                             <Icon icon="arrow" className="w-[15px] h-[15px] hidden group-hover:block" />
