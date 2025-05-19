@@ -1,0 +1,1 @@
+export const priceFormat = (price) => new Intl.NumberFormat("en-IN", { maximumSignificantDigits: 3 }).format(price)
