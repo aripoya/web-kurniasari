@@ -1,7 +1,8 @@
 import './App.css'
+import NewProductArrival from './components/NewProductArrival'
+import Product from './components/Product'
 import Header from './components/Header'
 import Hero from './components/Hero'
-import Product from './components/Product'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Hero />
       <Product />
+      <NewProductArrival />
     </>
   )
 }

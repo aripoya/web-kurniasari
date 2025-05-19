@@ -110,6 +110,8 @@ const Product = () => {
     }
 
     const onCreateOrder = (product) => {
+        // Request API create order
+        // API/order
         console.log("Order Produk :", product);
     }
 
@@ -152,7 +154,7 @@ const Product = () => {
                             <p className="text-sm text-gray-600 mb-5 leading-5">{product.description}</p>
                             <div className="flex items-center justify-between">
                                 <p className="text-black font-semibold">Rp {priceFormat(product.price)}</p>
-                                <a href="#" onClick={() => onCreateOrder(product)} className="text-md text-red-600 inline-block">Buat Pesanan</a>
+                                <a href="#buat-pesanan" onClick={() => onCreateOrder(product)} className="text-md text-red-600 inline-block">Buat Pesanan</a>
                             </div>
                         </div>
                     </div>
