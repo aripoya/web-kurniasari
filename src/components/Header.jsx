@@ -61,10 +61,10 @@ const Header = () => {
                 </div>
                 <a
                     href="#pesan-sekarang"
-                    className="hidden sm:inline-flex items-center bg-red text-white px-4 py-2 rounded-sm text-sm gap-2 whitespace-nowrap transition-all duration-300 h-[37px] w-[136px] hover:w-[158px]"
+                    className="hidden sm:inline-flex items-center bg-red text-white px-4 py-2 rounded-sm text-sm gap-2 whitespace-nowrap transition-all duration-300 h-[37px] w-[136px] hover:w-[158px] group"
                 >
                     <span>Pesan Sekarang</span>
-                    <Icon icon="arrow" className="w-[15px] h-[15px]" />
+                    <Icon icon="arrow" className="w-[15px] h-[15px] hidden group-hover:block" />
                 </a>
                 <button ref={btnMenuRef} onClick={onOpenMobileMenu} className="sm:hidden">
                     <Icon icon="bar-3" className="w-[36px] h-[36px] text-gray-400" />
