@@ -40,7 +40,7 @@ const NewProductArrival = () => {
                     <Icon icon="new-product-overlay" className="w-full absolute -top-5 h-[65%] hidden md:block" />
                 </div>
 
-                <div className="flex overflow-x-scroll max-w-[83.1vw] no-scrollbar bg-green-100 pb-10 md:pb-0 px-4 md:px-0">
+                <div className="flex overflow-x-scroll md:max-w-[84vw] no-scrollbar bg-green-100 pb-10 md:pb-0 px-4 md:px-0">
                     <Each
                         data={PRODUCT}
                         render={product => (
