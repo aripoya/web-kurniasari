@@ -13,7 +13,7 @@ const Hero = () => {
 
                         <a
                             href="#pesan-sekarang"
-                            className="hidden sm:inline-flex items-center bg-green text-white px-4 py-2 rounded-sm text-sm gap-2 whitespace-nowrap transition-all duration-300 h-[37px] w-[111px] hover:w-[135px] group"
+                            className="inline-flex items-center bg-green text-white px-4 py-2 rounded-sm text-sm gap-2 whitespace-nowrap transition-all duration-300 h-[37px] w-[111px] hover:w-[135px] group"
                         >
                             <span>Lihat Produk</span>
                             <Icon icon="arrow" className="w-[15px] h-[15px] hidden group-hover:block" />
