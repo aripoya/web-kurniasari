@@ -37,7 +37,7 @@ const Delivery = () => {
                 <div className="flex justify-center items-center">
                     <Icon icon="motorcycle-delivery" className="w-[14rem]" />
                 </div>
-                <div className="border-b border-gray-200 pb-12 mt-8">
+                <div className="border-b border-gray-200 pb-8 md:pb-12 mt-8">
                     <h2 className="font-semibold text-lg mb-3">Pesan Antar Dalam Kota</h2>
                     <p className="text-gray-500">{IN_THE_TOWN.description}</p>
                     <div className="mt-5">
