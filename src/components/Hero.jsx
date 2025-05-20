@@ -27,7 +27,7 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <div className="bg-[url('./images/hero-image.png')] bg-cover bg-center w-[45%] clip-hero h-full -right-1 absolute hidden md:block"></div>
+                <div className="bg-[url('/images/hero-image.png')] bg-cover bg-center w-[45%] clip-hero h-full -right-1 absolute hidden md:block"></div>
 
                 <Icon icon="hero-overlay" className="w-full h-[80%]" />
             </section>
