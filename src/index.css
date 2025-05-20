@@ -40,10 +40,12 @@
   @keyframes fade-out {
     from {
       opacity: 1;
+      display: inherit;
     }
 
     to {
       opacity: 0;
+      display: none;
     }
   }
 
