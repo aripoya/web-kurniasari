@@ -42,7 +42,13 @@ const PRODUCT = {
             title: "Bakpia Coklat",
             description: "Bakpia dengan isian kacang hijau pilihan yang legit dan manis.",
             price: 50000
-        }
+        },
+        {
+            thumbnail: "./images/hero-image.png",
+            title: "Bakpia Coklat",
+            description: "Bakpia dengan isian kacang hijau pilihan yang legit dan manis.",
+            price: 50000
+        },
     ],
     "bakpia-spesial": [
         {
