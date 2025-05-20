@@ -2,35 +2,39 @@ import { useRef } from "react";
 import Icon from "./utils/Icon";
 import { useEffect } from "react";
 
+const WHATSAPP_OUT_OF_TOWN = "620928282" // Please start with country code number
+const WHATSAPP_IN_THE_TOWN = "6209282822323" // Please start with country code number
+
 const SOCIAL = {
     phone: {
         label: "0274-0233424",
-        value: ""
+        value: "#"
     },
     email: {
         label: "bakpiakurniasari@gmail.com",
-        value: ""
+        value: "mailto:bakpiakurniasari@email.com"
     },
     whatsapp: {
         label: "08223346678",
-        value: ""
+        value: "https://wa.me/08223346678"
     },
     instagram: {
         label: "@bakpiakurniasari",
-        value: ""
+        value: "https://instagram.com/bakpiakurniasari.official"
     },
     facebook: {
         label: "Bakpia Kurniasari",
-        value: ""
+        value: "https://facebook.com/bakpiakurniasari"
     },
     tiktok: {
         label: "@bakpiakurniasari",
-        value: ""
+        value: "https://www.tiktok.com/search?q=bakpia%20kurnia%20sari%20jogja&t=1747749187095"
     }
 }
 
 const Footer = () => {
     const whatsappServiceRef = useRef(null)
+    const whatsappServiceWrapRef = useRef(null)
 
     const onToggleWhatsappService = () => {
         const ref = whatsappServiceRef.current;
@@ -47,8 +51,12 @@ const Footer = () => {
 
     useEffect(() => {
         const onOutsideClick = (ev) => {
-            if (!whatsappServiceRef.current?.contains(ev.target)) {
-                whatsappServiceRef.current.classList.add("fade-out")
+            const wSWref = whatsappServiceWrapRef.current;
+            const wSref = whatsappServiceRef.current;
+
+            if (!wSWref?.contains(ev.target)) {
+                wSref.classList.toggle("fade-in", false);
+                wSref.classList.toggle("fade-out", true);
             }
         }
 
@@ -71,11 +79,11 @@ const Footer = () => {
                         </li>
                         <li className="grid grid-cols-[30px_auto] items-center" target="_blank">
                             <Icon icon="footer-email" />
-                            <a href={SOCIAL.email.value}>{SOCIAL.email.label}</a>
+                            <a href={SOCIAL.email.value} target="__blank" >{SOCIAL.email.label}</a>
                         </li>
                         <li className="grid grid-cols-[30px_auto] items-center" target="_blank">
                             <Icon icon="footer-whatsapp" />
-                            <a href={SOCIAL.whatsapp.value}>{SOCIAL.whatsapp.label}</a>
+                            <a href={SOCIAL.whatsapp.value} target="__blank" >{SOCIAL.whatsapp.label}</a>
                         </li>
                     </ul>
                 </div>
@@ -84,15 +92,15 @@ const Footer = () => {
                     <ul className="space-y-3">
                         <li className="grid grid-cols-[30px_auto] items-center" target="_blank">
                             <Icon icon="footer-instagram" />
-                            <a href={SOCIAL.instagram.value}>{SOCIAL.instagram.label}</a>
+                            <a href={SOCIAL.instagram.value} target="__blank" >{SOCIAL.instagram.label}</a>
                         </li>
                         <li className="grid grid-cols-[30px_auto] items-center" target="_blank">
                             <Icon icon="footer-facebook" />
-                            <a href={SOCIAL.facebook.value}>{SOCIAL.facebook.label}</a>
+                            <a href={SOCIAL.facebook.value} target="__blank" >{SOCIAL.facebook.label}</a>
                         </li>
                         <li className="grid grid-cols-[30px_auto] items-center" target="_blank">
                             <Icon icon="footer-tiktok" />
-                            <a href={SOCIAL.tiktok.value}>{SOCIAL.tiktok.label}</a>
+                            <a href={SOCIAL.tiktok.value} target="__blank" >{SOCIAL.tiktok.label}</a>
                         </li>
                     </ul>
                 </div>
@@ -110,19 +118,20 @@ const Footer = () => {
                 <p className="text-center text-sm">© {(new Date()).getFullYear()} - Kurnia Sari</p>
             </div>
             <div
+                ref={whatsappServiceWrapRef}
                 onClick={onToggleWhatsappService}
-                className="fixed bottom-5 md:bottom-10 right-3 md:right-8 rounded-full w-[52px] h-[52px] bg-[#25D366] flex justify-center items-center border-4 border-white shadow-lg z-50">
+                className="fixed bottom-5 md:bottom-10 right-3 md:right-8 rounded-full w-[52px] h-[52px] bg-[#25D366] flex justify-center items-center border-4 border-white shadow-lg z-50 cursor-pointer">
 
                 <div ref={whatsappServiceRef} className="fade-out bg-white border-1 border-gray-300 rounded-md absolute w-50 p-3 text-black text-sm -right-1 bottom-14">
                     <h3 className="font-semibold mb-4">Layanan Whatsapp</h3>
                     <ul className="space-y-3">
                         <li className="grid grid-cols-[25px_auto]  hover:text-green transition-all duration-150">
                             <Icon icon="delivery-moto" />
-                            <a href="">Pesanan Dalam Kota</a>
+                            <a href={`https://wa.me/${WHATSAPP_IN_THE_TOWN}`} target="__blank">Pesanan Dalam Kota</a>
                         </li>
                         <li className="grid grid-cols-[25px_auto] hover:text-green transition-all duration-">
                             <Icon icon="delivery-car" />
-                            <a href="">Pesanan Luar Kota</a>
+                            <a href={`https://wa.me/${WHATSAPP_OUT_OF_TOWN}`} target="__blank">Pesanan Luar Kota</a>
                         </li>
                     </ul>
                 </div>
