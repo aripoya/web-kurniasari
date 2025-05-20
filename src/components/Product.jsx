@@ -127,10 +127,10 @@ const Product = () => {
     }, [selectedProductCategory])
 
     return (
-        <section id="produk" className="py-12 pl-4 container mx-auto">
+        <section id="produk" className="py-12 container mx-auto">
             <h2 className="text-center text-2xl font-normal mb-8 text-black">Varian Bakpia Kami</h2>
 
-            <div className="md:flex md:justify-center overflow-x-scroll no-scrollbar h-12 font-normal">
+            <div className="md:flex md:justify-center overflow-x-scroll no-scrollbar h-12 font-normal pl-4">
                 <nav className="text-sm whitespace-nowrap">
                     {
                         <Each
@@ -144,21 +144,22 @@ const Product = () => {
                 </nav>
             </div>
 
-            <div className="flex gap-6 mt-6 overflow-x-auto no-scrollbar xl:justify-center xl:flex-wrap">
+            <div className="flex gap-5 mt-4 overflow-x-auto no-scrollbar xl:justify-center xl:flex-wrap">
                 <Each
                     data={productData}
-                    render={product => <div className="overflow-hidden mb-6 min-w-[250px] max-w-[250px] flex-shrink-0">
-                        <img src={product.thumbnail} alt="Bakpia Coklat" className="w-full h-40 object-cover rounded-lg" />
-                        <div className="pt-4">
-                            <h3 className="font-normal mb-2 text-black">{product.title}</h3>
-                            <p className="text-sm text-gray-600 mb-5 leading-5">{product.description}</p>
-                            <div className="flex items-center justify-between">
-                                <p className="text-black font-semibold">Rp {priceFormat(product.price)}</p>
-                                <a href="#buat-pesanan" onClick={() => onCreateOrder(product)} className="text-md text-red-600 inline-block">Buat Pesanan</a>
+                    render={product => (
+                        <div className="overflow-hidden mb-6 min-w-[250px] max-w-[250px] flex-shrink-0 last:mr-4 md:last:mr-unset first:ml-4 md:first:ml-unset">
+                            <img src={product.thumbnail} alt="Bakpia Coklat" className="w-full h-40 object-cover rounded-lg" />
+                            <div className="pt-4">
+                                <h3 className="font-normal mb-2 text-black">{product.title}</h3>
+                                <p className="text-sm text-gray-600 mb-5 leading-5">{product.description}</p>
+                                <div className="flex items-center justify-between">
+                                    <p className="text-black font-semibold">Rp {priceFormat(product.price)}</p>
+                                    <a href="#buat-pesanan" onClick={() => onCreateOrder(product)} className="text-md text-red-600 inline-block">Buat Pesanan</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    }
+                    )}
                 />
 
             </div>

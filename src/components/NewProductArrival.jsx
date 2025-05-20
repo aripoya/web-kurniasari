@@ -3,19 +3,19 @@ import { priceFormat } from "./utils/helper"
 import Icon from "./utils/Icon"
 const PRODUCT = [
     {
-        thumbnail: "./images/hero-image.png",
+        thumbnail: "/images/hero-image.png",
         title: "Bakpia Oleh-Oleh",
         description: "Bakpia dengan isian kacang hijau pilihan yang legit dan manis.",
         price: 50000
     },
     {
-        thumbnail: "./images/product-2.png",
+        thumbnail: "/images/product-2.png",
         title: "Bakpia Coklat 2",
         description: "Bakpia dengan isian kacang hijau pilihan yang legit dan manis.",
         price: 50000
     },
     {
-        thumbnail: "./images/product-2.png",
+        thumbnail: "/images/product-2.png",
         title: "Bakpia Coklat 3",
         description: "Bakpia dengan isian kacang hijau pilihan yang legit dan manis.",
         price: 100000
