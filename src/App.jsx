@@ -6,6 +6,7 @@ import Outlet from './components/Outlet'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Testimonial from './components/Testimonial'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <Delivery />
       <Outlet />
       <Testimonial />
+      <Footer />
     </>
   )
 }
