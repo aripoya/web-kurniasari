@@ -1,6 +1,10 @@
 name = "kurniasari-web"
-main = "dist/worker.js"
 compatibility_date = "2023-05-22"
 
 [site]
 bucket = "./dist"
+entry-point = "."
+
+[build]
+command = "npm run build"
+upload.format = "service-worker"
