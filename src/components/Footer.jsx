@@ -69,8 +69,8 @@ const Footer = () => {
 
     return (
         <footer id="kontak" className="bg-green-100 text-white pt-8 relative">
-            <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
-                <div className="px-6 mb-4">
+            <div className="container mx-auto grid md:grid-cols-3 gap-6">
+                <div className="footer-item mb-4">
                     <h3 className="font-semibold mb-4">Hubungi Kami</h3>
                     <ul className="space-y-3">
                         <li className="grid grid-cols-[30px_auto] items-center" target="_blank">
@@ -87,7 +87,7 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="text-md mb-4 px-6">
+                <div className="footer-item text-md mb-4">
                     <h3 className="font-semibold mb-4">Ikuti Kami</h3>
                     <ul className="space-y-3">
                         <li className="grid grid-cols-[30px_auto] items-center" target="_blank">
@@ -104,7 +104,7 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="px-6 mb-4">
+                <div className="footer-item mb-4">
                     <h3 className="font-semibold mb-3">Subscribe Newsletter</h3>
                     <form className="flex relative" onSubmit={onSubscribeHandler}>
                         <input type="email" placeholder="email@example.com" className="w-full px-2 py-2 text-gray-900 bg-white rounded-l-md text-sm" />
