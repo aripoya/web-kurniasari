@@ -66,6 +66,30 @@
       display: none;
     }
   }
+
+  @media only screen and (max-width: 1439px) {
+
+    /* Product.jsx */
+    .product-item {
+      &:first-child {
+        margin-left: calc(var(--spacing) * 4)
+      }
+
+      &:last-child {
+        margin-right: calc(var(--spacing) * 4)
+      }
+    }
+
+    /* Outlet.jsx */
+    .outlet {
+      padding-inline: calc(var(--spacing) * 6)
+    }
+
+    /* Footer.jsx */
+    .footer-item {
+      padding-inline: calc(var(--spacing) * 6)
+    }
+  }
 }
 
 :root {
