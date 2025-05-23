@@ -50,7 +50,7 @@ const Outlet = () => {
 
     return (
         <section id="lokasi" className="relative mt-5 md:mt-42 text-black">
-            <div className="container mx-auto relative px-6 z-10">
+            <div className="outlet container mx-auto relative z-10">
                 <div className="rounded-lg border-gray-200 border-1 p-6 shadow-lg bg-white">
                     <div className="flex justify-between items-center mb-4">
                         <h2 className="text-2xl font-normal inline-block">
