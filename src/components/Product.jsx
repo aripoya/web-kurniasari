@@ -49,6 +49,18 @@ const PRODUCT = {
             description: "Bakpia dengan isian kacang hijau pilihan yang legit dan manis.",
             price: 50000
         },
+        {
+            thumbnail: "./images/hero-image.png",
+            title: "Bakpia Coklat",
+            description: "Bakpia dengan isian kacang hijau pilihan yang legit dan manis.",
+            price: 50000
+        },
+        {
+            thumbnail: "./images/hero-image.png",
+            title: "Bakpia Coklat",
+            description: "Bakpia dengan isian kacang hijau pilihan yang legit dan manis.",
+            price: 50000
+        },
     ],
     "bakpia-spesial": [
         {
@@ -150,11 +162,11 @@ const Product = () => {
                 </nav>
             </div>
 
-            <div className="flex gap-5 mt-4 overflow-x-auto no-scrollbar xl:justify-center xl:flex-wrap">
+            <div className="flex gap-7 mt-4 overflow-x-auto no-scrollbar xl:justify-center xl:flex-wrap">
                 <Each
                     data={productData}
                     render={product => (
-                        <div className="overflow-hidden mb-6 min-w-[250px] max-w-[250px] flex-shrink-0 last:mr-4 md:last:mr-unset first:ml-4 md:first:ml-unset">
+                        <div className="product-item overflow-hidden mb-6 min-w-[295px] max-w-[295px] flex-shrink-0">
                             <img src={product.thumbnail} alt="Bakpia Coklat" className="w-full h-40 object-cover rounded-lg" />
                             <div className="pt-4">
                                 <h3 className="font-normal mb-2 text-black">{product.title}</h3>
