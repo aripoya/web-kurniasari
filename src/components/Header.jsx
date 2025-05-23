@@ -3,6 +3,7 @@ import { useRef } from "react";
 import Icon from "./utils/Icon";
 import Each from "./utils/Each";
 import { scrollToId } from "./utils/helper";
+import Button from "./utils/Button";
 
 const MENUS = [
     {
@@ -69,17 +70,16 @@ const Header = () => {
                         />
                     </nav>
                 </div>
-                <a
+                <Button
                     href="#pesan-sekarang"
-                    className="hidden sm:inline-flex items-center bg-red text-white px-4 py-2 rounded-sm text-sm gap-2 whitespace-nowrap transition-all duration-300 h-[37px] w-[136px] hover:w-[158px] group"
-                >
-                    <span>Pesan Sekarang</span>
-                    <Icon icon="arrow" className="w-[15px] h-[15px] hidden group-hover:block" />
-                </a>
+                    onClick={onOrderNowHandler}
+                    className="hidden sm:inline-flex bg-red text-white"
+                >Pesan Sekarang</Button>
+
                 <button ref={btnMenuRef} onClick={onOpenMobileMenu} className="sm:hidden">
                     <Icon icon="bar-3" className="w-[36px] h-[36px] text-gray-400" />
                 </button>
-                <button ref={btnCloseMenuRef} onClick={onCloseMobileMenu} className="hidden">
+                <button ref={btnCloseMenuRef} onClick={onCloseMobileMenu} className="hidden md:hidden">
                     <Icon icon="x-mark" className="w-[36px] h-[36px] text-gray-400" />
                 </button>
             </div>
@@ -95,9 +95,12 @@ const Header = () => {
                     render={menu => <a href={menu.url} onClick={(e) => onClickMenuHandler(e, menu.url)} className="hover:text-green transition-all duration-300 text-black">{menu.link}</a>}
                 />
             </nav>
-            <a href="#pesan-sekarang" onClick={onOrderNowHandler} className="bg-red text-white px-4 py-2 rounded-sm text-sm text-center w-full inline-block">
+            <Button
+                href="#pesan-sekarang"
+                onClick={onOrderNowHandler}
+                className="bg-red text-white px-4 py-2 rounded-sm text-sm text-center w-full inline-block">
                 Pesan Sekarang
-            </a>
+            </Button>
         </div>
     </>
 }
