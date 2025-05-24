@@ -100,7 +100,7 @@ const Outlet = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-green h-[68%] w-full absolute bottom-0 block md:hidden"></div>
+            <div className="bg-green h-[68%] w-full absolute bottom-0 block md:hidden" />
             <div className="z-0 hidden md:block bg-red">
                 <span id="outlet-ornam-3">
                     <Icon icon="outlet-ornam-3" className="absolute bottom-40 w-full" />

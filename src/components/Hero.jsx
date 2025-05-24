@@ -1,3 +1,4 @@
+import Button from "./utils/Button";
 import Icon from "./utils/Icon"
 
 const Hero = () => {
@@ -15,15 +16,13 @@ const Hero = () => {
                             <span className="text-green">Bakpia Kekinian</span>, Cita Rasa Asli Jogja
                         </h1>
                         <p className="leading-7">Nikmati kelezatan bakpia premium dengan berbagai varian rasa yang unik dan menggugah selera</p>
-
-                        <a
-                            href="#lihat-produk"
-                            className="inline-flex items-center bg-green text-white px-4 py-2 rounded-sm text-sm gap-2 whitespace-nowrap transition-all duration-300 h-[37px] w-[111px] hover:w-[135px] group"
+                        <Button
+                            href={"#lihat-produk"}
+                            className="inline-flex items-center bg-green text-white"
                             onClick={onShowProduct}
                         >
-                            <span>Lihat Produk</span>
-                            <Icon icon="arrow" className="w-[15px] h-[15px] hidden group-hover:block" />
-                        </a>
+                            Lihat Produk
+                        </Button>
                     </div>
                 </div>
 

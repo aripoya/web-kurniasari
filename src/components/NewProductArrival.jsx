@@ -1,3 +1,4 @@
+import Button from "./utils/Button"
 import Each from "./utils/Each"
 import { priceFormat } from "./utils/helper"
 import Icon from "./utils/Icon"
@@ -45,12 +46,18 @@ const NewProductArrival = () => {
                         data={PRODUCT}
                         render={product => (
                             <div style={{ backgroundImage: `url('${product.thumbnail}')` }} className={`bg-cover bg-center shadow-md flex-shrink-0 min-w-[300px] md:min-w-[342px]  min-h-[515px] md:w-auto relative`}>
-                                <div className="p-4 absolute bottom-0 text-white bg-gradient-to-t from-slate-900 to-transparent">
+                                <div className="p-4 w-full absolute bottom-0 text-white bg-gradient-to-t from-slate-900 to-transparent">
                                     <h3 className="font-bold mb-1">{product.title}</h3>
                                     <p className="text-sm mb-4 leading-5">{product.description}</p>
                                     <div className="flex items-center justify-between">
                                         <p className="text-sm">Rp {priceFormat(product.price)}</p>
-                                        <a href="#buat-pesanan" onClick={() => onCreateOrder(product)} className="text-sm bg-red-600 text-white px-3 py-1 rounded">Buat Pesanan</a>
+                                        <Button
+                                            href={"#lihat-semua-produk"}
+                                            className="inline-flex items-center bg-red text-white"
+                                            onClick={() => onCreateOrder(product)}
+                                        >
+                                            Buat Pesanan
+                                        </Button>
                                     </div>
                                 </div>
                             </div>

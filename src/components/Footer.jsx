@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import Icon from "./utils/Icon";
 import { useEffect } from "react";
+import Button from "./utils/Button";
 
 const WHATSAPP_OUT_OF_TOWN = "620928282" // Please start with country code number
 const WHATSAPP_IN_THE_TOWN = "6209282822323" // Please start with country code number
@@ -106,11 +107,15 @@ const Footer = () => {
                 </div>
                 <div className="footer-item mb-4">
                     <h3 className="font-semibold mb-3">Subscribe Newsletter</h3>
-                    <form className="flex relative" onSubmit={onSubscribeHandler}>
+                    <form className="flex relative">
                         <input type="email" placeholder="email@example.com" className="w-full px-2 py-2 text-gray-900 bg-white rounded-l-md text-sm" />
-                        <button type="submit" className="flex bg-red-600 px-4 py-1 rounded-r-md  text-sm gap-3 text-nowrap items-center">
+                        <Button
+                            href={"#lihat-produk"}
+                            className="inline-flex items-center bg-red text-white"
+                            onClick={onSubscribeHandler}
+                        >
                             Subscribe
-                        </button>
+                        </Button>
                     </form>
                 </div>
             </div>

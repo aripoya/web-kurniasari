@@ -3,6 +3,7 @@ import Each from "./utils/Each";
 import { priceFormat } from "./utils/helper";
 import Icon from "./utils/Icon";
 import { useEffect } from "react";
+import Button from "./utils/Button";
 
 const PRODUCT_CATEGORIES = [
     {
@@ -183,14 +184,13 @@ const Product = () => {
             </div>
 
             <div className="text-center flex justify-center mt-10">
-                <a
-                    href="#lihat-semua-produk"
-                    className="inline-flex items-center bg-green text-white px-4 py-2 rounded-sm text-sm gap-2 whitespace-nowrap transition-all duration-300 h-[37px] w-[159px] hover:w-[181px] group"
+                <Button
+                    href={"#lihat-semua-produk"}
+                    className="inline-flex items-center bg-green text-white"
                     onClick={onShowAllProduct}
                 >
-                    <span>Lihat Semua Produk</span>
-                    <Icon icon="arrow" className="w-[15px] h-[15px] hiddengroup-hover:block" />
-                </a>
+                    Lihat Semua Produk
+                </Button>
             </div>
         </section>
     )

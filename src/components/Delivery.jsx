@@ -1,3 +1,4 @@
+import Button from "./utils/Button"
 import { priceFormat } from "./utils/helper"
 import Icon from "./utils/Icon"
 
@@ -77,14 +78,13 @@ const Delivery = () => {
             </div>
 
             <div className="text-center flex justify-center mt-20">
-                <a
+                <Button
+                    href={"#lihat-produk"}
+                    className="inline-flex items-center bg-green text-white"
                     onClick={onShowHoToOrder}
-                    href="#lihat-cara-pemesanan"
-                    className="items-center bg-green text-white px-4 py-2 rounded-sm text-sm gap-2 whitespace-nowrap transition-all duration-300 h-[37px] w-[173px] hover:w-[199px] group"
                 >
-                    <span>Lihat Cara Pemesanan</span>
-                    <Icon icon="arrow" className="w-[15px] h-[15px] hidden group-hover:block" />
-                </a>
+                    Lihat Cara Pemesanan
+                </Button>
             </div>
         </section>
     )
