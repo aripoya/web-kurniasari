@@ -10,4 +10,18 @@ export default defineConfig({
     svgr(),
     tailwindcss()
   ],
+  build: {
+    // Memastikan output build kompatibel dengan Cloudflare Workers
+    target: 'es2022',
+    outDir: 'dist',
+    assetsDir: 'assets',
+    // Mengoptimalkan ukuran bundle
+    minify: 'terser',
+    // Memastikan semua kode diproses dengan benar
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
+  }
 })
