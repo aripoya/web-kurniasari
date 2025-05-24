@@ -73,7 +73,7 @@ const Outlet = () => {
                                     Filter
                                 </button>
                             </div>
-                            <ul>
+                            <ul className="max-h-[1242px] overflow-y-scroll no-scrollbar">
                                 <Each
                                     data={OUTLETS}
                                     render={outlet => (
