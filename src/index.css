@@ -57,14 +57,42 @@
   }
 
   @media only screen and (min-width: 1441px) {
+
+    body {
+      font-size: large;
+
+      .text-sm {
+        font-size: large;
+      }
+    }
+
     #new-product-arrival {
       display: flex;
       justify-content: center;
+
+      .new-product-arrival-item {
+        width: 374px
+      }
     }
 
     #outlet-ornam-3 {
       display: none;
     }
+
+    .testimonial-card {
+      width: 502px
+    }
+
+    #produk {
+      .product-item {
+        min-width: 362px;
+
+        >img {
+          height: calc(var(--spacing) * 50);
+        }
+      }
+    }
+
   }
 
   @media only screen and (max-width: 1439px) {

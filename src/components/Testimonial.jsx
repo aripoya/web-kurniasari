@@ -34,7 +34,7 @@ const TESTIMONIALS = [
 
 const Testimonial = () => {
     return (
-        <section className="bg-green text-white py-14">
+        <section className="bg-green text-white py-14 -mt-1">
             <h2 className="text-center text-2xl font-normal mb-4 px-4 block leading-normal">
                 Testimoni Dari Pelanggan Kami
             </h2>
@@ -45,7 +45,7 @@ const Testimonial = () => {
                     <Each
                         data={TESTIMONIALS}
                         render={testimoni => (
-                            <div className="bg-white text-gray-800 p-4 rounded-lg flex-shrink-0 w-[350px] md:w-[415px] border-l-8 border-green-100">
+                            <div className="testimonial-card bg-white text-gray-800 p-4 rounded-lg flex-shrink-0 w-[350px] md:w-[415px] border-l-8 border-green-100">
                                 <div className="flex justify-start gap-1">
                                     <img src={testimoni.image_profile} alt={testimoni.name} className="w-15 h-15 rounded-full mr-2" />
                                     <div className="text-sm">
