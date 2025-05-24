@@ -23,13 +23,13 @@ const TESTIMONIALS = [
         created_at: "3 April 2025",
         rating: 5
     },
-    {
-        name: "Azizah Aisha",
-        image_profile: "images/testimonial-1.png",
-        content: "Rasanya legit, isian melimpah, dan selalu fresh! Bakpia Kurnia Sari jadi oleh-oleh wajib tiap kali ke Jogja. Nggak pernah mengecewakan!",
-        created_at: "3 April 2025",
-        rating: 3
-    },
+    // {
+    //     name: "Azizah Aisha",
+    //     image_profile: "images/testimonial-1.png",
+    //     content: "Rasanya legit, isian melimpah, dan selalu fresh! Bakpia Kurnia Sari jadi oleh-oleh wajib tiap kali ke Jogja. Nggak pernah mengecewakan!",
+    //     created_at: "3 April 2025",
+    //     rating: 3
+    // },
 ]
 
 const Testimonial = () => {
@@ -41,11 +41,11 @@ const Testimonial = () => {
             <p className="text-center px-6 max-w-xl mx-auto">Nikmati kelezatan bakpia premium dengan berbagai varian rasa yang unik dan menggugah selera</p>
 
             <div className="flex justify-center">
-                <div className="mt-10 flex gap-4 mx-auto px-6 overflow-x-auto no-scrollbar">
+                <div className="mt-10 flex gap-4 px-4 mx-auto overflow-x-auto no-scrollbar">
                     <Each
                         data={TESTIMONIALS}
                         render={testimoni => (
-                            <div className="bg-white text-gray-800 p-4 rounded-lg flex-shrink-0 w-2/2 md:w-[350px] border-l-8 border-green-100">
+                            <div className="bg-white text-gray-800 p-4 rounded-lg flex-shrink-0 w-2/2 md:w-[415px] border-l-8 border-green-100">
                                 <div className="flex justify-start gap-1">
                                     <img src={testimoni.image_profile} alt={testimoni.name} className="w-15 h-15 rounded-full mr-2" />
                                     <div className="text-sm">
